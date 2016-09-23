@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,34 +15,77 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-cH-kgl">
-                                <frame key="frameInset" minX="90" minY="336" width="131" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Fist Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OT-1c-Vow">
+                                <frame key="frameInset" minX="16" minY="403" width="346" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8OT-1c-Vow" secondAttribute="height" multiplier="125:7" id="OeM-IQ-dOB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QPH-sW-WaZ">
+                                <frame key="frameInset" minX="137" minY="275" width="100" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fx1-bm-lQx">
+                                        <frame key="frameInset" width="100" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCD-Zt-zcB">
+                                                <frame key="frameInset" width="100" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="2ia-xr-yP3"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-cH-kgl">
+                                <frame key="frameInset" minX="122" minY="338" width="131" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hzi-cH-kgl" secondAttribute="height" multiplier="131:42" id="sJA-ak-KPM"/>
+                                </constraints>
                                 <state key="normal" title="Click Here"/>
                                 <connections>
                                     <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BeV-G6-kM1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="My Fist Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OT-1c-Vow">
-                                <frame key="frameInset" minX="102" minY="260" width="171" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CuK-ce-aH1">
+                                <frame key="frameInset" minX="94" minY="198" width="191" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xm2-Rc-Hrh"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8OT-1c-Vow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="YTL-SX-WLn"/>
-                            <constraint firstItem="8OT-1c-Vow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uXa-aB-RY2"/>
+                            <constraint firstItem="8OT-1c-Vow" firstAttribute="top" secondItem="hzi-cH-kgl" secondAttribute="bottom" constant="100" id="9c9-jV-ubJ"/>
+                            <constraint firstItem="CuK-ce-aH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ha7-gH-gwp"/>
+                            <constraint firstItem="8OT-1c-Vow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="YTL-SX-WLn"/>
+                            <constraint firstItem="hzi-cH-kgl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="Z3L-Il-5kg"/>
+                            <constraint firstItem="8OT-1c-Vow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j0w-mE-RZi"/>
+                            <constraint firstItem="CuK-ce-aH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="85" id="lq7-cm-JjS"/>
+                            <constraint firstItem="QPH-sW-WaZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o5t-dO-GQT"/>
+                            <constraint firstItem="QPH-sW-WaZ" firstAttribute="width" secondItem="CuK-ce-aH1" secondAttribute="width" id="rrp-co-F1a"/>
+                            <constraint firstItem="8OT-1c-Vow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="uXa-aB-RY2"/>
                             <constraint firstItem="8OT-1c-Vow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w8f-XP-Oe7"/>
+                            <constraint firstItem="CuK-ce-aH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="400" id="yaW-fy-UCY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myLabel" destination="8OT-1c-Vow" id="iJi-Mx-dG2"/>
+                        <outlet property="text1" destination="CuK-ce-aH1" id="1MP-v3-YAI"/>
+                        <outlet property="text2" destination="XCD-Zt-zcB" id="DYs-u6-VfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
